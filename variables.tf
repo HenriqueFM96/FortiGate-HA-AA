@@ -12,9 +12,9 @@ variable "az" {
 
 // IAM role that has proper permission for HA
 // Refer to the URL For details. https://docs.fortinet.com/document/fortigate-public-cloud/7.2.0/aws-administration-guide/229470/deploying-fortigate-vm-active-passive-ha-aws-between-multiple-zones
-variable "iam" {
-  default = "<AWS IAM ROLE NAME>" //Put in the IAM Role name created
-}
+#variable "iam" {
+#  default = "<AWS IAM ROLE NAME>" //Put in the IAM Role name created
+#}
 
 variable "vpccidr" {
   default = "10.1.0.0/16"
@@ -28,13 +28,13 @@ variable "privatecidr" {
   default = "10.1.1.0/24"
 }
 
-variable "hasynccidr" {
-  default = "10.1.2.0/24"
-}
+#variable "hasynccidr" {
+#  default = "10.1.2.0/24"
+#}
 
-variable "hamgmtcidr" {
-  default = "10.1.3.0/24"
-}
+#variable "hamgmtcidr" {
+#  default = "10.1.3.0/24"
+#}
 
 // Preshare key for autoscale
 variable "presharekey" {
