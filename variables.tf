@@ -3,11 +3,11 @@ variable "access_key" {}
 variable "secret_key" {}
 
 variable "region" {
-  default = "eu-west-1"
+  default = "us-west-1"
 }
 
 variable "az" {
-  default = "eu-west-1a"
+  default = "us-west-1a"
 }
 
 // IAM role that has proper permission for HA
