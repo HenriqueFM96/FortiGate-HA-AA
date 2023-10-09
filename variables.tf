@@ -16,7 +16,6 @@ variable "iam" {
   default = "instances-keys"
 }
 
-
 variable "vpccidr" {
   default = "10.1.0.0/16"
 }
