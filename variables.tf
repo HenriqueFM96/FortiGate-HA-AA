@@ -16,6 +16,7 @@ variable "az" {
 #  default = "FortiGate-VM-LAB-IAM-Role"
 #}
 
+
 variable "vpccidr" {
   default = "10.1.0.0/16"
 }
