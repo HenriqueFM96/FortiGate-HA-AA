@@ -12,9 +12,9 @@ variable "az" {
 
 // IAM role that has proper permission for HA
 // Refer to the URL For details. https://docs.fortinet.com/document/fortigate-public-cloud/7.2.0/aws-administration-guide/229470/deploying-fortigate-vm-active-passive-ha-aws-between-multiple-zones
-variable "iam" {
-  default = "instances-keys"
-}
+#variable "iam" {
+#  default = "instances-keys"
+#}
 
 variable "vpccidr" {
   default = "10.1.0.0/16"
@@ -358,7 +358,7 @@ variable "fgtami" {
 
 //  Existing SSH Key on the AWS 
 variable "keyname" {
-  default = "Fortinet_LAB-California"
+  default = "instances-keys"
 }
 
 // HTTPS access port
