@@ -46,7 +46,7 @@ resource "aws_instance" "fgtpassive" {
     presharekey   = "${var.presharekey}"
 
   })
-  iam_instance_profile = var.iam
+  #iam_instance_profile = var.iam
 
   root_block_device {
     volume_type = "standard"
