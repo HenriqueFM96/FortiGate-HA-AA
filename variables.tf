@@ -358,7 +358,7 @@ variable "fgtami" {
 
 //  Existing SSH Key on the AWS 
 variable "keyname" {
-  default = "instances-keys"
+  default = "Fortinet_LAB-California"
 }
 
 // HTTPS access port
