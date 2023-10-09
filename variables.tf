@@ -28,13 +28,13 @@ variable "privatecidr" {
   default = "10.1.1.0/24"
 }
 
-#variable "hasynccidr" {
-#  default = "10.1.2.0/24"
-#}
+variable "hasynccidr" {
+  default = "10.1.2.0/24"
+}
 
-#variable "hamgmtcidr" {
-#  default = "10.1.3.0/24"
-#}
+variable "hamgmtcidr" {
+  default = "10.1.3.0/24"
+}
 
 // Preshare key for autoscale
 variable "presharekey" {
