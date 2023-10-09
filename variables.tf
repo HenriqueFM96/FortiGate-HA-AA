@@ -7,7 +7,7 @@ variable "region" {
 }
 
 variable "az" {
-  default = "us-west-1a"
+  default = "us-west-1b"
 }
 
 // IAM role that has proper permission for HA
