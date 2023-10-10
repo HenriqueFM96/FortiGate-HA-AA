@@ -10,6 +10,12 @@ variable "az" {
   default = "us-west-1b"
 }
 
+# Prefix for all resources created for this deployment in AWS
+variable "tag_name_prefix" {
+  description = "Resources' tags"
+  default     = "AWS_Summit_2023"
+}
+
 // IAM role that has proper permission for HA
 // Refer to the URL For details. https://docs.fortinet.com/document/fortigate-public-cloud/7.2.0/aws-administration-guide/229470/deploying-fortigate-vm-active-passive-ha-aws-between-multiple-zones
 #variable "iam" {
