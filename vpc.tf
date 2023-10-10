@@ -90,3 +90,40 @@ resource "aws_route_table_association" "spoke1_rt_association1" {
   route_table_id = aws_route_table.spoke1-rt.id
 }
 
+resource "aws_security_group" "NSG-spoke2-allow-all" {
+  name        = "NSG-spoke2-allow-all"
+  description = "Allow all traffic"
+  vpc_id      = aws_vpc.spoke_vpc2.id
+
+  ingress {
+    description = "Allow any inbound traffic"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port       = 0
+    to_port         = 0
+    protocol        = "-1"
+    cidr_blocks     = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "SecurityGroup_Spokes"
+    
+  }
+}
+
+# Subnets
+resource "aws_subnet" "spoke_vpc2-priv1" {
+  vpc_id            = aws_vpc.spoke_vpc2.id
+  cidr_block        = var.spoke_vpc2_private_subnet_cidr1
+  availability_zone = var.availability_zone1
+
+  tags = {
+    Name = "${aws_vpc.spoke_vpc2.tags.Name}-priv1"
+  }
+}
+
