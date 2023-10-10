@@ -474,6 +474,40 @@ variable "license2" {
   default = "license2.lic"
 }
 
+#####################################################################
+#                          SPOKES                                   #
+#####################################################################
+
+# spoke1 VPC
+variable "spoke_vpc1_cidr" {
+  description = "Provide the network CIDR for the VPC"
+  default     = "172.30.50.0/24"
+}
+
+variable "spoke_vpc1_private_subnet_cidr1" {
+  description = "Provide the network CIDR for the private subnet1 in spoke vpc1"
+  default     = "172.30.50.0/24"
+}
+
+/*
+variable "spoke_vpc1_private_subnet_cidr2" {
+  description = "Provide the network CIDR for the private subnet2 in spoke vpc1"
+  default     = "10.1.10.0/24"
+}
+*/
+
+# spoke2 VPC
+variable "spoke_vpc2_cidr" {
+  description = "Provide the network CIDR for the VPC"
+  default     = "172.30.60.0/24"
+}
+
+variable "spoke_vpc2_private_subnet_cidr1" {
+  description = "Provide the network CIDR for the private subnet1 in spoke vpc2"
+  default     = "172.30.60.0/24"
+}
+
+
 variable "spoke_instances" {
   description = "AMI for spoke instances"
   default = "ami-07fdb1c75bae7e33b"
