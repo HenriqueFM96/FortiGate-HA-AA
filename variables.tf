@@ -474,3 +474,8 @@ variable "license2" {
   default = "license2.lic"
 }
 
+variable "spoke_instances" {
+  description = "AMI for spoke instances"
+  default = "ami-07fdb1c75bae7e33b"
+}
+
